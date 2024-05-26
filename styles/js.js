@@ -25,7 +25,7 @@ function handleLogin(event) {
         alert('Tên người dùng hoặc mật khẩu không đúng');
     }
 
-    return false; // Ngăn chặn hành vi mặc định của form
+    return false; 
 }
 
 function handleSignup(event) {
@@ -43,7 +43,7 @@ function handleSignup(event) {
         toggleSection('login');
     }
 
-    return false; // Ngăn chặn hành vi mặc định của form
+    return false; 
 }
 
 function showBuyButtons() {
