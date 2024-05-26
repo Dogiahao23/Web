@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Bánh Ngọt</title>
+    <link rel="stylesheet" href="./styles/css.css">
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" alt="Logo" class="logo">
+  
+    <div class="container">
+        <h1>Cửa Hàng Bánh Ngọt</h1>
+       
+    </div>
+    <div class="nav-container">
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#home" onclick="toggleSection('products')">Trang Chủ</a></li>
+                    <li><a href="#products" onclick="toggleSection('products')">Sản Phẩm</a></li>
+                    <li><a href="#cart" onclick="toggleSection('cart')">Giỏ Hàng</a></li>
+                    <li><a href="#signup" onclick="toggleSection('signup')">Đăng Ký</a></li>
+                    <li><a href="#login" onclick="toggleSection('login')">Đăng Nhập</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <section id="products" class="product-list toggle-section">
+        <div class="product">
+            <img src="./image/dau.jpg" alt="Bánh kem dâu" width="250" height="200">
+            <h3>Bánh kem dâu</h3>
+            <p>Giá: 150.000 VND</p>
+            <button onclick="addToCart('Bánh kem dâu', 150000)">Mua</button>
+        </div>
+        <div class="product">
+            <img src="./image/choco.jpg" alt="Bánh chocolate" width="300" height="200">
+            <h3>Bánh chocolate</h3>
+            <p>Giá: 200.000 VND</p>
+            <button onclick="addToCart('Bánh chocolate', 200000)">Mua</button>
+        </div>
+        <div class="product">
+            <img src="./image/macha.jpg" alt="Bánh matcha" width="300" height="200">
+            <h3>Bánh matcha</h3>
+            <p>Giá: 180.000 VND</p>
+            <button onclick="addToCart('Bánh matcha', 180000)">Mua</button>
+        </div>
+    </section>
+</div>
+<div class="container">
+    <section id="signup" class="hidden toggle-section">
+        <h2>Đăng Ký</h2>
+        <form action="#" method="post" onsubmit="return handleSignup(event)">
+            <label for="signup-username">Tên người dùng:</label><br>
+            <input type="text" id="signup-username" name="signup-username" required><br><br>
+            <label for="signup-password">Mật khẩu:</label><br>
+            <input type="password" id="signup-password" name="signup-password" required><br><br>
+            <input type="submit" value="Đăng Ký">
+        </form>
+    </section>
+</div>
+<div class="container">
+    <section id="login" class="hidden toggle-section">
+        <h2>Đăng Nhập</h2>
+        <form action="#" method="post" onsubmit="return handleLogin(event)">
+            <label for="login-username">Tên người dùng:</label><br>
+            <input type="text" id="login-username" name="login-username" required><br><br>
+            <label for="login-password">Mật khẩu:</label><br>
+            <input type="password" id="login-password" name="login-password" required><br><br>
+            <input type="submit" value="Đăng Nhập">
+        </form>
+    </section>
+</div>
+<div class="container">
+    <section id="cart" class="hidden toggle-section">
+        <h2>Giỏ Hàng</h2>
+        <div id="cart-items">
+        </div>
+        <div class="cart-total" id="cart-total">Tổng: 0 VND</div>
+        <button class="checkout" onclick="handleCheckout()">Thanh Toán</button>
+    </section>
+</div>
+<footer>
+    <div class="container">
+        <p>Liên hệ: info@cuahangbanhngot.com | Điện thoại: 0123-456-789</p>
+    </div>
+</footer>
+<script src="./styles/js.js"></script>
+</body>
+</html>    
